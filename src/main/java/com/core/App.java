@@ -1,0 +1,29 @@
+package com.core;
+
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println("Hello World!");
+        String arr[] = {"a", "b", "c"};
+        System.out.println(arr);
+        LocalDateTime fromDate = LocalDateTime.of(2024, 1, 25,
+                12, 56, 12
+        );
+        LocalDateTime toDate = LocalDateTime.now();
+        long millis = Duration.between(fromDate, toDate).toMillis();
+        LocalDate localDate = fromDate.toLocalDate().plusDays(1);
+
+        System.out.println(fromDate + "  " + localDate);
+
+        System.out.println();
+    }
+}
