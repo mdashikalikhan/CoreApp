@@ -13,6 +13,8 @@ public class DeadLockDemo {
 
         Thread t2 = new Thread(deadLockDemo::method2);
 
+        /*t1.setPriority(Thread.MAX_PRIORITY);
+        t2.setPriority(Thread.MIN_PRIORITY);*/
         t1.start();
 
         t2.start();
@@ -22,11 +24,11 @@ public class DeadLockDemo {
         synchronized (resource1){
             System.out.println("Method 1: holding lock for resource 1");
 
-            try {
-                Thread.sleep(100);
+            /*try {
+                Thread.sleep(1);
             } catch (InterruptedException e) {
                 //throw new RuntimeException(e);
-            }
+            }*/
 
             System.out.println("Method 1: waiting for resource 2");
             synchronized (resource2){
@@ -42,8 +44,8 @@ public class DeadLockDemo {
             System.out.println("Method 2: holding lock for resource 2");
 
             try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
+                //Thread.sleep(100);
+            } catch (Exception e) {
                 //throw new RuntimeException(e);
             }
 
