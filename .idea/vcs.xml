@@ -3,7 +3,9 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../assessment" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../microservices-app" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../mockitoapp" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../spring-coolapp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../thunderhead" vcs="Git" />
   </component>
 </project>

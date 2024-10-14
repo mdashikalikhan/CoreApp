@@ -8,6 +8,12 @@
         <option value="$PROJECT_DIR$/../assessment/pom.xml" />
         <option value="$PROJECT_DIR$/../spring-coolapp/pom.xml" />
         <option value="$PROJECT_DIR$/../mockitoapp/pom.xml" />
+        <option value="$PROJECT_DIR$/../microservices-app/gateway-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../microservices-app/gwuserservice/pom.xml" />
+        <option value="$PROJECT_DIR$/../thunderhead/pom.xml" />
+        <option value="$PROJECT_DIR$/../microservices-app/user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../microservices-app/account-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../microservices-app/apigateway/pom.xml" />
       </list>
     </option>
   </component>
