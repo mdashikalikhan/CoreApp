@@ -35,6 +35,14 @@ public class Q929 {
 
         System.out.hashCode();
 
+        System.out.println("".hashCode());
+
+        //System.out.println(42.hashCode());
+
+        System.out.println(("4"+2).equals(42));
+
+        System.out.println((new java.util.Vector()).hashCode());
+
     }
 
 
