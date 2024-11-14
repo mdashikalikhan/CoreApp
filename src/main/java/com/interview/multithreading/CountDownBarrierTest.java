@@ -6,7 +6,7 @@ import java.util.concurrent.CyclicBarrier;
 public class CountDownBarrierTest {
 
     public static void main(String[] args) {
-
+        test1();
     }
 
     private static void test1(){
@@ -30,7 +30,7 @@ public class CountDownBarrierTest {
         new Thread(task).start();
 
         new Thread(()->{
-            System.out.println(Thread.currentThread().getName() + " is working..");
+            System.out.println(Thread.currentThread().getName() + " waiting for barrier.");
             try {
                 Thread.sleep(5000);
                 cyclicBarrier.await();
@@ -39,7 +39,23 @@ public class CountDownBarrierTest {
             } catch (BrokenBarrierException e) {
                 throw new RuntimeException(e);
             }
+            System.out.println(Thread.currentThread().getName() + " proceeds.");
         }).start();
+
+        new Thread(task).start();
+
+        /*new Thread(()->{
+            System.out.println(Thread.currentThread().getName() + " waiting for barrier.");
+            try {
+                Thread.sleep(10000);
+                cyclicBarrier.await();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            } catch (BrokenBarrierException e) {
+                throw new RuntimeException(e);
+            }
+            System.out.println(Thread.currentThread().getName() + " proceeds.");
+        }).start();*/
 
 
 
