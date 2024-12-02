@@ -8,18 +8,20 @@ public class SendMail {
 
     public static void main(String[] args) {
 
-        final String username = "cbx.retail@sonaliintellect.com";
+        final String username = "noreply@rupalibank.org";// "cbx.retail@sonaliintellect.com";
 
-        final String password = "sonali@123";
+        final String password = "i#<w2TB2[v$HbO<]";//"sonali@123";
 
         // Recipient's email ID needs to be mentioned.
         String to = "ashik.khan@sonaliintellect.com";
 
         // Sender's email ID needs to be mentioned
-        String from = "cbx.retail@sonaliintellect.com";
+        String from = "noreply@rupalibank.org"; //""cbx.retail@sonaliintellect.com";
 
         // Assuming you are sending email from localhost
-        String host = "smtp.office365.com";
+        String host = "mail.rupalibank.org"; // "smtp.office365.com";
+
+        String port = "465"; //"587"
 
         // Get system properties
         Properties properties = System.getProperties();
