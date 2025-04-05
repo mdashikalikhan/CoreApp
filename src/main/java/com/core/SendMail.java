@@ -10,10 +10,11 @@ public class SendMail {
 
         final String username = "noreply@rupalibank.org";// "cbx.retail@sonaliintellect.com";
 
-        final String password = "i#<w2TB2[v$HbO<]";//"sonali@123";
+        final String password = "noReply^083656"; //"i#<w2TB2[v$HbO<]";//"sonali@123";
 
         // Recipient's email ID needs to be mentioned.
-        String to = "ashik.khan@sonaliintellect.com";
+        //ashik.khan@sonaliintellect.com
+        String to = "khan.ashik@gmail.com";
 
         // Sender's email ID needs to be mentioned
         String from = "noreply@rupalibank.org"; //""cbx.retail@sonaliintellect.com";
@@ -29,7 +30,7 @@ public class SendMail {
         // Setup mail server
         properties.setProperty("mail.smtp.host", host);
 
-        properties.setProperty("mail.smtp.port", "587");
+        properties.setProperty("mail.smtp.port", port);
 
         properties.put("mail.smtp.auth", true);
 
