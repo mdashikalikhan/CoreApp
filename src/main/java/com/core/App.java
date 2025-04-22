@@ -25,5 +25,12 @@ public class App
         System.out.println(fromDate + "  " + localDate);
 
         System.out.println();
+
+        int x = 15;
+        int y = 10;
+
+        x = x++ + ++y;
+
+        System.out.println(x);
     }
 }
