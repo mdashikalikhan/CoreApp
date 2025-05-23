@@ -5,12 +5,15 @@
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../assessment/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../microservices-app/account-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../microservices-app/album/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../microservices-app/apigateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../microservices-app/configserver/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../microservices-app/gateway-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../microservices-app/gwuserservice/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../microservices-app/user-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../mockitoapp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../myerp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../resilience4jlibrary/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../spring-coolapp/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../thunderhead/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../thunderhead/src/main/resources" charset="UTF-8" />

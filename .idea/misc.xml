@@ -15,6 +15,9 @@
         <option value="$PROJECT_DIR$/../microservices-app/account-service/pom.xml" />
         <option value="$PROJECT_DIR$/../microservices-app/apigateway/pom.xml" />
         <option value="$PROJECT_DIR$/../microservices-app/configserver/pom.xml" />
+        <option value="$PROJECT_DIR$/../microservices-app/album/pom.xml" />
+        <option value="$PROJECT_DIR$/../resilience4jlibrary/pom.xml" />
+        <option value="$PROJECT_DIR$/../myerp/pom.xml" />
       </list>
     </option>
   </component>
