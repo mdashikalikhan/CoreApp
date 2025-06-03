@@ -6,5 +6,14 @@ public class InterfaceTest {
 
         System.out.println(interface1.sum(100,200));
 
+        Vehicle vehicle = new Car(200);
+
+        vehicle.start();
+
+        Vehicle v = ()-> System.out.println("Hi....");
+
+        v.start();
+
+
     }
 }
