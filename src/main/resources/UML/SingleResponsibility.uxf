@@ -12,14 +12,14 @@
     <panel_attributes>Employee_P
 
 --
-id: long
-name: String
-department: string
-working: boolean
+- id: long
+- name: String
+- department: string
+w- orking: boolean
 --
-saveToDb()
-printToXml()
-terminate()
++ saveToDb()
++ printToXml()
++ terminate()
 
 </panel_attributes>
     <additional_attributes/>
