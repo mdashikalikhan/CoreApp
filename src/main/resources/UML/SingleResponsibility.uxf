@@ -4,10 +4,68 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
-      <y>60</y>
-      <w>210</w>
-      <h>190</h>
+      <x>310</x>
+      <y>130</y>
+      <w>160</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Employee
+
+--
+- id: long
+- name: String
+- department: string
+- working: boolean
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>30</x>
+      <y>450</y>
+      <w>650</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+
+</panel_attributes>
+    <additional_attributes>10.0;30.0;630.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>480</x>
+      <y>530</y>
+      <w>60</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>120</x>
+      <y>540</y>
+      <w>270</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Our application in  physical world
+bg=YELLOW</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>310</y>
+      <w>130</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>Employee_P
 
@@ -15,13 +73,184 @@
 - id: long
 - name: String
 - department: string
-w- orking: boolean
+- working: boolean
 --
 + saveToDb()
 + printToXml()
 + terminate()
 
-</panel_attributes>
+
+bg=RED</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>340</y>
+      <w>230</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>EmployeeModule
+--
+hireNewEmployee(Employee e)
+terminateEmployee(Employee e)
+printEmployeeReport(Employee e)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>370</x>
+      <y>260</y>
+      <w>110</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;instantiates&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>50</y>
+      <w>200</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>EmployeeDao
+
+--
+connectionManager: DbCNM
+--
++saveEmployee(Employee e)
++deleteEmployee(Employee e)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>70</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>280</y>
+      <w>270</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>DatabaseConnectionManager
+--
++ getInstance(): DatabaseConnectionManager
++ connect()
++ disconnect()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>150</y>
+      <w>30</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>150</y>
+      <w>150</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;instantiates&gt;&gt;</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>160</y>
+      <w>220</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>EmployeeReportFormatter
+--
+- empoyee: Employee
+- formatType: FormatType
+--
++ getFormattedEmployee(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>260</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>ReportFormatter
+--
+--
+-convertObjToXML(Object obj):String
+-convertObjToCSV(Object obj):String
++getFormattedValue(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>80</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>200</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>240</y>
+      <w>130</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;instantiates&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>550</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
   </element>
 </diagram>
