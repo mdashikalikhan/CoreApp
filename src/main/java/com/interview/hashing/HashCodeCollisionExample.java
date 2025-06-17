@@ -13,4 +13,6 @@ public class HashCodeCollisionExample {
         System.out.println(str1.equals(str2));
 
     }
+
+    private class Abc{}
 }
