@@ -9,20 +9,20 @@ public class BlockingTest {
         Thread t1 = new Thread(
                 () -> {
                     synchronized (obj) {
-                        System.out.println("Thread 1 holds lock");
-                        try {
+                        /*System.out.println("Thread 1 holds lock");*/
+                        /*try {
                             Thread.sleep(6000);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
-                        }
-                        System.out.println("Waiting to be notified...");
+                        }*/
+                        System.out.println("Thread 1 is waiting for notify...");
 
                         try {
                             obj.wait();
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        System.out.println("Thread 1 notified..");
+                        System.out.println("Thread 1 is notified..");
                     }
 
                 }
@@ -30,20 +30,51 @@ public class BlockingTest {
 
         Thread t2 = new Thread(
                 () -> {
+                    try {
+                        Thread.sleep(7000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                     synchronized (obj) {
-                        System.out.println("Thread 2 holds lock");
+                        //System.out.println("Thread 2 holds lock");
+
+
+
+                        System.out.println("Thread 2 send notify to all threads");
+                        obj.notifyAll();
+
+
+
+                    }
+
+                }
+        );
+
+        Thread t3 = new Thread(
+                () -> {
+                    synchronized (obj) {
+                        System.out.println("Thread 3 is waiting for notify");
                         try {
-                            Thread.sleep(2000);
+                            obj.wait();
+                            System.out.println("Thread 3 is notified");
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
+                    }
 
+                }
+        );
 
-                        System.out.println("Thread 2 send notify");
-                        obj.notify();
-
-
-
+        Thread t4 = new Thread(
+                () -> {
+                    synchronized (obj) {
+                        System.out.println("Thread 4 is waiting for notify");
+                        try {
+                            obj.wait();
+                            System.out.println("Thread 4 is notified");
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
                     }
 
                 }
@@ -53,5 +84,9 @@ public class BlockingTest {
         t1.start();
 
         t2.start();
+
+        t3.start();
+
+        t4.start();
     }
 }
