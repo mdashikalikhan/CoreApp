@@ -17,7 +17,7 @@ public class ReentrantLockExample {
             + " acquired lock...");
 
             try{
-                Thread.sleep(5000);
+                Thread.sleep(6000);
             } finally {
                 lock.unlock();
                 System.out.println(Thread.currentThread().getName()
@@ -42,7 +42,7 @@ public class ReentrantLockExample {
 
             if(acquired){
                 try{
-                    Thread.sleep(2000);
+                    Thread.sleep(3000);
                 } finally {
                     lock.unlock();
                     System.out.println(Thread.currentThread().getName()
@@ -60,8 +60,34 @@ public class ReentrantLockExample {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ReentrantLockExample reentrantLockExample = new ReentrantLockExample();
+
+        Thread t1 = new Thread(reentrantLockExample::performLockWithInterruption, "T-1");
+
+        Thread t2 = new Thread(reentrantLockExample::tryLOckWithTimeout, "T-2");
+
+        t1.start();
+
+        Thread.sleep(800);
+
+        t2.start();
+
+        Thread t3 = new Thread(
+                ()->{
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+
+                    }
+                    System.out.println("Interrupting thread T-1");
+                    t1.interrupt();
+
+                }
+        );
+
+        t3.start();
+
     }
 
 }
