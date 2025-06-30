@@ -5,10 +5,14 @@ import java.util.function.Consumer;
 
 public class ConsumerExample {
     public static void main(String[] args) {
-        Consumer<Number> consumer = (num)-> System.out.println(num.intValue()*100);
-        consumer.andThen(c->c.intValue());
+        Consumer<Number> consumer = (num) -> System.out.println("Initial Value: " + num);
+        Consumer<Number> combined1 = consumer.andThen(n -> System.out.println("After that (n*n): " + n.doubleValue()
+                * n.doubleValue()));
+        combined1.andThen(n -> System.out.println("After that (n-n): " + (n.doubleValue()
+        - n.doubleValue())));
 
-        consumer.accept(100);
+
+        combined1.accept(100);
 
     }
 }
