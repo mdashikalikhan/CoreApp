@@ -1,9 +1,6 @@
 package com.features.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -11,8 +8,10 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@RequiredArgsConstructor
 public class Student {
 
+    @NonNull
     private String name;
 
     private int gradeLevel;
@@ -22,5 +21,6 @@ public class Student {
     private String gender;
 
     private List<String> favourites;
+
 
 }
