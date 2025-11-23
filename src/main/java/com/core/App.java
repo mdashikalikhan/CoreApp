@@ -32,5 +32,11 @@ public class App
         x = x++ + ++y;
 
         System.out.println(x);
+
+        Integer x1 = 127;
+
+        Integer x2 = 127;
+
+        System.out.println(x1 == x2);
     }
 }
