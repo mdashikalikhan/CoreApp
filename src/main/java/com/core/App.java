@@ -38,5 +38,12 @@ public class App
         Integer x2 = 127;
 
         System.out.println(x1 == x2);
+
+        MyGenericClass<Integer> myGenericClass = new MyGenericClass<>(10000);
+
+        myGenericClass.displayObjectDetails();
+
+        System.out.println(myGenericClass.getObject());
+
     }
 }
