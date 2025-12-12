@@ -45,5 +45,7 @@ public class App
 
         System.out.println(myGenericClass.getObject());
 
+        Implementable.displayObjectDetails();
+
     }
 }
