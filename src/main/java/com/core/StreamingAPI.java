@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamingAPI {
     public static void main(String[] args) {
@@ -12,5 +13,6 @@ public class StreamingAPI {
         System.out.println(list.stream().takeWhile(x -> x < 20).collect(Collectors.toList()));
 
         System.out.println(list.stream().dropWhile(x -> x < 10).collect(Collectors.toList()));
+        System.out.println(list.stream().dropWhile(x -> x < 10).flatMap(x->Stream.ofNullable(x)).collect(Collectors.toList()));
     }
 }
