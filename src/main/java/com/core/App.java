@@ -47,5 +47,11 @@ public class App
 
         Implementable.displayObjectDetails();
 
+        try(MyWorker myWorker = new MyWorker();){
+            myWorker.doSomething();
+        } catch(Exception ex){
+            ex.printStackTrace();
+        }
+
     }
 }
